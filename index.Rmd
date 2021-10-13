@@ -31,7 +31,8 @@ library(ggplot2)
 library(plotly)
 
 ```
-```{r datos}
+
+```{r datos, warning=FALSE, message = FALSE}
 
 
 
@@ -72,6 +73,15 @@ altitud <-
     "/vsicurl/https://raw.githubusercontent.com/tpb728O-programaciongeoespacialr/2021ii/master/datos/worldclim/altitud.tif"
   )
 
+```
+
+#Tabla
+
+```{r tabla}
+felidae %>%
+  st_drop_geometry()%>%
+  select(scientificName, stateProvince, locality, eventDate)%>%
+datatable()
 
 ```
 
